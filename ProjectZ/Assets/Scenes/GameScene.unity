@@ -964,7 +964,7 @@ RectTransform:
   m_GameObject: {fileID: 904763238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5709443, y: 0.5709443, z: 0.5709443}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2069768462}
@@ -2127,6 +2127,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1382895294}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &1593727920265731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8411398454597955171, guid: b7d53436be0d66d4b8989d7fc5452e4e, type: 3}
+  m_PrefabInstance: {fileID: 8956156855142018529}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &124991110278676620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593727920265731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    m_Quality: 3
+    m_FrameInfluence: 0.1
+    m_JitterScale: 1
+    m_MipBias: 0
+    m_VarianceClampScale: 0.9
+    m_ContrastAdaptiveSharpening: 0
 --- !u!1001 &8956156855142018529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2175,6 +2224,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2355622718408369265, guid: b7d53436be0d66d4b8989d7fc5452e4e, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3758957959762563285, guid: b7d53436be0d66d4b8989d7fc5452e4e, type: 3}
       propertyPath: m_Name
       value: First Person Controller
@@ -2182,7 +2235,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8411398454597955171, guid: b7d53436be0d66d4b8989d7fc5452e4e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 124991110278676620}
   m_SourcePrefab: {fileID: 100100000, guid: b7d53436be0d66d4b8989d7fc5452e4e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
