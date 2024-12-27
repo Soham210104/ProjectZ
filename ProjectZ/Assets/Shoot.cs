@@ -4,8 +4,8 @@ public class Shoot : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform bulletSpawnPoint; 
-    public float bulletSpeed = 20f; 
-
+    public float bulletSpeed = 20f;
+    public ParticleSystem muzzleFlash;
     void Update()
     {
         if (Input.GetButtonDown("Fire1")) 
@@ -26,7 +26,7 @@ public class Shoot : MonoBehaviour
           }
 
           Destroy(bullet, 5f); */
-
+        muzzleFlash.Play();
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
 
         
