@@ -6,6 +6,14 @@ public class Shoot : MonoBehaviour
     public Transform bulletSpawnPoint; 
     public float bulletSpeed = 20f;
     public ParticleSystem muzzleFlash;
+    public CameraShake cameraShake;
+    public AudioSource audioSource; 
+    public AudioClip shootSound;   
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>(); 
+    }
     void Update()
     {
         if (Input.GetButtonDown("Fire1")) 
@@ -17,6 +25,8 @@ public class Shoot : MonoBehaviour
     void ShootBullet()
     {
 
+        if (shootSound != null)
+            audioSource.PlayOneShot(shootSound);
         /*  GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
 
           Rigidbody rb = bullet.GetComponent<Rigidbody>();
@@ -27,6 +37,8 @@ public class Shoot : MonoBehaviour
 
           Destroy(bullet, 5f); */
         muzzleFlash.Play();
+
+
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
 
         
@@ -42,5 +54,7 @@ public class Shoot : MonoBehaviour
 
         
         Destroy(bullet, 5f);
+
+        StartCoroutine(cameraShake.Shake(0.1f, 0.1f));
     } 
 }
